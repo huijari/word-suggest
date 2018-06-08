@@ -1,0 +1,24 @@
+{
+  "name": "tp2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tucker build",
+    "start": "tucker run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huijari/word-suggest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huijari/word-suggest/issues"
+  },
+  "homepage": "https://github.com/huijari/word-suggest#readme",
+  "devDependencies": {
+    "tucker": "^2.0.0"
+  }
+}

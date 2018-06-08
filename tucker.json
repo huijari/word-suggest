@@ -1,0 +1,14 @@
+{
+  "name": "tp2",
+  "version": "1.0.0",
+  "transpile": {
+    "exec": "cm-c",
+    "extension": "c",
+    "formatter": "clang-format -style=chromium"
+  },
+  "compile": {
+    "exec": "clang",
+    "flags": "-O3 -Wall -Wextra -g",
+    "files": "*.c"
+  }
+}
