@@ -5,7 +5,6 @@
 (include "tree.h")
 (include <stddef.h>)
 (include <stdlib.h>)
-(include <string.h>)
 
 (function main () -> int
 	(decl ((uint16_t dictionaryLength = (readNumber))
@@ -16,7 +15,7 @@
 	(decl ((Node* tree = NULL)))
 	(for ((int i = 0) (< i dictionaryLength) i++)
 		(decl ((char* text = (readWord))
-					 (uint16_t cost = (distance text (strlen text) query (strlen query)))))
+					 (uint16_t cost = (distance text query))))
 		(if (<= cost changes)
 			(set tree (insert tree cost text))
 			(free text)))
