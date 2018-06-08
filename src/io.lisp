@@ -11,3 +11,6 @@
 	(decl ((char* value = (malloc (* 8192 (sizeof char))))))
 	(scanf "%8191s\\n" value)
 	(return value))
+
+(function writeWord ((char* word)) -> void
+	(printf "%s\\n" word))

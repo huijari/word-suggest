@@ -13,4 +13,9 @@ uint16_t readNumber();
  */
 char* readWord();
 
+/**
+ * Writes a word to stdin
+ */
+void writeWord(char* word);
+
 #endif
