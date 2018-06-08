@@ -10,7 +10,7 @@
 (function compare ((Node* node) (uint16_t cost) (char* word)) -> bool
 	(if (< cost node->cost) (return false))
 	(if (> cost node->cost) (return true))
-	(return (strcmp word node->word)))
+	(return (> (strcmp word node->word) 0)))
 
 (function insert ((Node* root) (uint16_t cost) (char* word)) -> Node*
 	(when (== root NULL)
