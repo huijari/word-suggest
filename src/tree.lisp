@@ -8,8 +8,8 @@
 (include <string.h>)
 
 (function compare ((Node* node) (uint16_t cost) (char* word)) -> bool
-	(if (> cost node->cost) (return false))
-	(if (< cost node->cost) (return true))
+	(if (< cost node->cost) (return false))
+	(if (> cost node->cost) (return true))
 	(return (strcmp word node->word)))
 
 (function insert ((Node* root) (uint16_t cost) (char* word)) -> Node*
@@ -23,8 +23,8 @@
 	
 	(line)
 	(if (compare root cost word)
-		(set root->left (insert root->left cost word))
-		(set root->right (insert root->right cost word)))
+		(set root->right (insert root->right cost word))
+		(set root->left (insert root->left cost word)))
 	(return root))
 
 (function traverse ((Node* node)) -> void
