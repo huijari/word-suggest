@@ -9,7 +9,7 @@ const { name } = require('./package.json')
 const min = 1
 const max = 10
 
-for (let i = min; i < max; i++) {
+for (let i = min; i <= max; i++) {
   try {
     execSync(`build/${name} < tests/input${i}.txt > output.tmp`)
   } catch (e) {
