@@ -1,0 +1,1 @@
+(defun line () (comment "" :prefix ""))
