@@ -13,11 +13,4 @@ uint16_t readNumber();
  */
 char* readWord();
 
-/**
- * Reads a list of words from stdin
- * 
- * @param length Length of the list
- */
-char** readWords(uint16_t length);
-
 #endif
