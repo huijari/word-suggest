@@ -1,5 +1,6 @@
 import Code from 'react-syntax-highlighter'
 import { githubGist } from 'react-syntax-highlighter/styles/hljs'
+
 import { levenshtein, memoization, tree } from './snippets.js'
 
 ## Modelagem
