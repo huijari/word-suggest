@@ -32,3 +32,6 @@ traverse(node) {
 		traverse(node.right)
 	}
 }`
+
+export const sum = `m = \\sum_i len(palavra_i)`
+export const complexity = `\\theta(mn)`
