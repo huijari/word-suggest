@@ -11,7 +11,7 @@ número é menor do que o número requerido, sendo este menor, a palavra é adic
 binária.
 Depois disso a árvore é percorrida em ordem, imprimindo as palavras armazenadas.
 
-Para o número de operações foi utilizado o algorítimo recursivo para a distância Levenshtein:
+Para o número de operações foi utilizado o algoritimo recursivo para a distância Levenshtein:
 <Code language="c" style={githubGist}>{levenshtein}</Code>
 
 Para evitar recalcular valores previamente calculados, foi utilizada uma matriz como memória, onde

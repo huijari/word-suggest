@@ -1,10 +1,10 @@
 export const levenshtein = `levenshtein(text, textLength, query, queryLength) {
 	if (textLength == 0) return queryLength
 	if (queryLength == 0) return textLength
-	if (text[textLength - 1] == query[queryLength - 1]) cost = 0
-	else cost = 1
-	return min(levenshtein(text, textLength - 1, query, queryLength) + 1,
-	           levenshtein(text, textLength, query, queryLength - 1) + 1,
+	if (text[textLength - 1] == query[queryLength - 1]) cost = 0 // igualdade
+	else cost = 1 // substituição
+	return min(levenshtein(text, textLength - 1, query, queryLength) + 1, // deleção
+	           levenshtein(text, textLength, query, queryLength - 1) + 1, // inserção
 	           levenshtein(text, textLength - 1, query, queryLength - 1) + cost)
 }`
 
@@ -31,7 +31,6 @@ traverse(node) {
 }`
 
 export const sum = `m = \\sum_i len(palavra_i)`
-export const complexity = `\\theta(mn)`
 
 export const time = [
   { value: 1026, avg: 1.7 },

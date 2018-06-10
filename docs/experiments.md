@@ -14,7 +14,7 @@ import { time } from './snippets.js'
 Para cada caso de teste disponibilizado, o programa foi executado 10 vezes e o tempo médio
 coletado. No gráfico abaixo é mostrado a relação de tempo por <InlineMath math="m*n"/>
 (número de caracteres no dicionário * número de caracteres na busca). E de fato vemos que
-a proporção seque um padrão linear.
+a proporção segue um padrão linear.
 
 <VictoryChart containerComponent={<VictoryContainer responsive={false}/>}>
 	<VictoryLine data={time} x="value" y="avg" />
