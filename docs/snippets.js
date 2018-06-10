@@ -3,9 +3,14 @@ export const levenshtein = `levenshtein(text, textLength, query, queryLength) {
 	if (queryLength == 0) return textLength
 	if (text[textLength - 1] == query[queryLength - 1]) cost = 0 // igualdade
 	else cost = 1 // substituição
-	return min(levenshtein(text, textLength - 1, query, queryLength) + 1, // deleção
-	           levenshtein(text, textLength, query, queryLength - 1) + 1, // inserção
-	           levenshtein(text, textLength - 1, query, queryLength - 1) + cost)
+	return min(
+		// deleção
+		levenshtein(text, textLength - 1, query, queryLength) + 1,
+		// inserção
+		levenshtein(text, textLength, query, queryLength - 1) + 1,
+		// igualdade ou substituição
+		levenshtein(text, textLength - 1, query, queryLength - 1) + cost
+	)
 }`
 
 export const memoization = `levenshtein(text, textLength, query, queryLength) {
@@ -30,7 +35,7 @@ traverse(node) {
 	}
 }`
 
-export const sum = `m = \\sum_i len(palavra_i)`
+export const sum = `m = \\sum_i |palavra_i|`
 
 export const time = [
   { value: 1026, avg: 1.7 },
